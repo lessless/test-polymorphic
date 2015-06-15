@@ -6,6 +6,13 @@
   {{/each}}
 </ul>
 
+<p>Users</p>
+<ul>
+  {{#each user in model.users}}
+  <li> {{user.name}} - {{user.address.city}}</li>
+  {{/each}}
+</ul>
+
 <p>Addresses</p>
 <ul>
   {{#each address in model.addresses}}
@@ -17,12 +24,6 @@
 <ul>
   {{#each group in model.groups}}
     <li> {{group.name}} - {{#each contact in group.contacts}} {{contact.name}}, {{/each}}</li>
-  {{/each}}
-</ul>
-<p>Users</p>
-<ul>
-  {{#each user in model.users}}
-  <li> {{user.name}} - {{user.address.city}}</li>
   {{/each}}
 </ul>
 
