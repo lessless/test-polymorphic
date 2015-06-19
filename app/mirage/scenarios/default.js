@@ -19,4 +19,7 @@ export default function(server) {
   server.create('group', {name: 'Group1', contact_ids: [1 ,2 ]});
   server.create('group', {name: 'Group2', contact_ids: [1,2 ]});
   server.create('group', {name: 'Group3', contact_ids: [3 ]});
+  
+  server.create('email');
+  server.create('phone');
 }

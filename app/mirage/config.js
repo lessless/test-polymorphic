@@ -1,15 +1,15 @@
 export default function() {
 
   this.get('/users', function(db) {
-    return {users: db.users, addresses: db.addresses};
+    return {users: db.users};
   });
 
   this.get('/contacts', function(db) {
-    return {contacts: db.contacts, addresses: db.addresses};
+    return {contacts: db.contacts};
   });
 
   this.get('/addresses', function(db) {
-    return {contacts: db.contacts, addresses: db.addresses, users: db.users};
+    return {addresses: db.addresses, emails: db.emails, phones: db.phones};
   });
 
   this.get('/addresses/:id', function(db, request) {
@@ -21,5 +21,6 @@ export default function() {
   this.get('/groups');
   this.put('/addresses/:id');
   this.put('/users/:id');
+  this.put('/contacts/:id');
   this.put('/contacts/:id');
 }
